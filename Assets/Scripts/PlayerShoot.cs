@@ -35,11 +35,22 @@ public class PlayerShoot
     {
         Assert.IsNotNull( bullet );
 
-        GameObject temp = Instantiate( bullet );
-        Bullet script = temp.GetComponent<Bullet>();
-        script.SetPos( transform.position );
-        script.SetVel( ( target -
-            ( Vector2 )transform.position ).normalized );
+        for( int i = 0; i < 6; ++i )
+        {
+            Vector2 delta = ( target - ( Vector2 )transform
+                .position ).normalized;
+
+            float angle = Mathf.Atan2( delta.y,delta.x );
+
+            const float deviation = Mathf.PI / 15.0f;
+            angle += Random.Range( -deviation,deviation );
+            
+            GameObject temp = Instantiate( bullet );
+            Bullet script = temp.GetComponent<Bullet>();
+            script.SetPos( transform.position );
+            script.SetVel( new Vector2( Mathf.Cos( angle ),
+                Mathf.Sin( angle ) ) );
+        }
     }
     Vector2 GetMousePos()
     {
@@ -51,6 +62,6 @@ public class PlayerShoot
     // 
     [SerializeField] GameObject bullet;
     Camera cam;
-    Timer refire = new Timer( 0.5f );
+    Timer refire = new Timer( 0.3f );
     bool canClick = false;
 }

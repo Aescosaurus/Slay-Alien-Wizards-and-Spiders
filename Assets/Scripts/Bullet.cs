@@ -6,12 +6,12 @@ public class Bullet
     :
     MonoBehaviour
 {
-    // void Update()
-    // {
-    //     lifetime.Update( Time.deltaTime );
-    //     
-    //     if( lifetime.IsDone() ) Destroy( gameObject );
-    // }
+    void Update()
+    {
+        lifetime.Update( Time.deltaTime );
+        
+        if( lifetime.IsDone() ) Destroy( gameObject );
+    }
     public void SetPos( Vector3 pos )
     {
         transform.position = pos;
@@ -19,7 +19,11 @@ public class Bullet
     public void SetVel( Vector2 dir )
     {
         GetComponent<Rigidbody2D>()
-            .AddForce( dir * speed,ForceMode2D.Impulse );
+            .AddForce( dir * ( speed + Random
+            .Range( -speedDev,speedDev ) ),
+            ForceMode2D.Impulse );
+
+        vel = dir;
     }
     void OnTriggerEnter2D( Collider2D other )
     {
@@ -29,12 +33,14 @@ public class Bullet
                 .GetComponent<Enemy>();
             if( script != null )
             {
-                script.Attack( 1 );
+                script.Attack( 1,vel * 1.5f );
             }
             Destroy( gameObject );
         }
     }
     // 
-    const float speed = 28.5f;
-    // Timer lifetime = new Timer( 0.34f );
+    const float speed = 19.7f;
+    const float speedDev = 3.0f;
+    Timer lifetime = new Timer( 0.34f );
+    Vector2 vel = new Vector2( 0.0f,0.0f );
 }

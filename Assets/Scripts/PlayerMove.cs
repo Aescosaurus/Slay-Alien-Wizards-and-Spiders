@@ -11,11 +11,13 @@ public class PlayerMove
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        cam = Camera.main;
     }
     // Update is called once per frame
     void Update()
     {
         Assert.IsNotNull( body );
+        Assert.IsNotNull( cam );
 
         float dt = GetDT();
 
@@ -52,6 +54,14 @@ public class PlayerMove
 
             if( maxJump.IsDone() ) FinishJump();
         }
+
+        Vector3 camPos = new Vector3
+        (
+            cam.transform.position.x,
+            transform.position.y,
+            cam.transform.position.z
+        );
+        cam.transform.position = camPos;
     }
     void FinishJump()
     {
@@ -76,4 +86,5 @@ public class PlayerMove
     bool canJump = false;
     Timer minJump = new Timer( 0.11f );
     Timer maxJump = new Timer( 0.75f );
+    Camera cam;
 }
