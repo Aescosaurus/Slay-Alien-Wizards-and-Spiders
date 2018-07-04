@@ -179,6 +179,9 @@
 -define:UNITY_EDITOR_WIN
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:UNITY_TEAM_LICENSE
+Assets/Scripts/Bullet.cs
+Assets/Scripts/Enemy.cs
+Assets/Scripts/Player.cs
 Assets/Scripts/PlayerMove.cs
 Assets/Scripts/PlayerShoot.cs
 Assets/Scripts/Timer.cs

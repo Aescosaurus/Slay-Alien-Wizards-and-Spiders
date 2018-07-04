@@ -24,8 +24,9 @@ public class PlayerShoot
         {
             canClick = true;
         }
-        else if( canClick )
+        else if( canClick && refire.IsDone() )
         {
+            refire.Reset();
             ShootAt( GetMousePos() );
             canClick = false;
         }
@@ -43,6 +44,7 @@ public class PlayerShoot
     Vector2 GetMousePos()
     {
         Assert.IsNotNull( cam );
+
         Vector3 msPos = Input.mousePosition;
         return( cam.ScreenToWorldPoint( msPos ) );
     }
