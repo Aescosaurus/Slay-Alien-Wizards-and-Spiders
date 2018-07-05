@@ -20,13 +20,25 @@ public class EnemyMove
         Assert.IsNotNull( body );
         Assert.IsNotNull( player );
 
-        Vector2 force = new Vector2( 0.0f,0.0f );
-        force.x = ( player.transform.position.x >
-            transform.position.x ) ? speed : -speed;
-        body.AddForce( force );
+        if( activated )
+        {
+            Vector2 force = new Vector2( 0.0f,0.0f );
+            force.x = ( player.transform.position.x >
+                transform.position.x ) ? speed : -speed;
+            body.AddForce( force );
+        }
+    }
+    void OnBecameVisible()
+    {
+        activated = true;
+    }
+    void OnBecameInvisible()
+    {
+        activated = false;
     }
     // 
     Rigidbody2D body;
     GameObject player;
     const float speed = 10.0f;
+    bool activated = false;
 }

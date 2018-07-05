@@ -18,6 +18,7 @@ public class PlayerMove
     {
         Assert.IsNotNull( body );
         Assert.IsNotNull( cam );
+        Assert.IsNotNull( walls );
 
         float dt = GetDT();
 
@@ -55,13 +56,23 @@ public class PlayerMove
             if( maxJump.IsDone() ) FinishJump();
         }
 
-        Vector3 camPos = new Vector3
-        (
-            cam.transform.position.x,
-            transform.position.y,
-            cam.transform.position.z
-        );
-        cam.transform.position = camPos;
+        {
+            Vector3 camPos = new Vector3
+            (
+                cam.transform.position.x,
+                transform.position.y,
+                cam.transform.position.z
+            );
+            cam.transform.position = camPos;
+
+            Vector3 wallPos = new Vector3
+            (
+                walls.transform.position.x,
+                transform.position.y,
+                walls.transform.position.z
+            );
+            walls.transform.position = wallPos;
+        }
     }
     void FinishJump()
     {
@@ -87,4 +98,5 @@ public class PlayerMove
     Timer minJump = new Timer( 0.11f );
     Timer maxJump = new Timer( 0.75f );
     Camera cam;
+    [SerializeField] GameObject walls;
 }
