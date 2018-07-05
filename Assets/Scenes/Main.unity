@@ -205,7 +205,7 @@ Transform:
   - {fileID: 1145864342}
   - {fileID: 1367912000}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &458269751
 Prefab:
@@ -576,7 +576,7 @@ Transform:
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &739782895
 MonoBehaviour:
@@ -866,6 +866,7 @@ GameObject:
   - component: {fileID: 1414406929}
   - component: {fileID: 1414406927}
   - component: {fileID: 1414406928}
+  - component: {fileID: 1414406932}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -987,6 +988,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414406932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1414406926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae09b99ecdf3d5408850d2b0fb1f018, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1575300738
 Prefab:
   m_ObjectHideFlags: 0
@@ -1114,7 +1126,7 @@ Transform:
   - {fileID: 1900823407}
   - {fileID: 95026280}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1872965741 stripped
 Transform:

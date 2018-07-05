@@ -40,7 +40,7 @@ public class Bullet
     }
     // 
     const float speed = 19.7f;
-    const float speedDev = 3.0f;
+    const float speedDev = 4.1f;
     Timer lifetime = new Timer( 0.34f );
     Vector2 vel = new Vector2( 0.0f,0.0f );
 }
