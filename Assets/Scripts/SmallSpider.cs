@@ -18,6 +18,17 @@ public class SmallSpider
 
         if( IsActivated() )
         {
+            jumpTimer.Update( Time.deltaTime );
+
+            if( jumpTimer.IsDone() )
+            {
+                body.AddForce( new
+                    Vector2( 0.0f,jumpPower ),
+                    ForceMode2D.Impulse );
+
+                jumpTimer.Reset();
+            }
+
             body.AddForce( new
                 Vector2( ( float )dir * speed,0.0f ) );
 
@@ -49,7 +60,8 @@ public class SmallSpider
     Rigidbody2D body;
     int dir = -1;
     const float speed = 10.0f;
-    const float jumpPower = 4.5f;
+    const float jumpPower = 4.61542f;
+    Timer jumpTimer = new Timer( 3.15f );
     Vector2 lastPos = new Vector2( 0.0f,0.0f );
     Vector2 posBeforeThat = new Vector2( 0.0f,0.0f );
 }

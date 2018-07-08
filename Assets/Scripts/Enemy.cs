@@ -18,6 +18,12 @@ public class Enemy
         hp -= amount;
         if( hp < 1 )
         {
+            ParticleDropper drop = GetComponent<ParticleDropper>();
+            if( drop != null )
+            {
+                drop.CreateParticles( transform.position,
+                    Random.Range( 3,6 ) );
+            }
             Destroy( gameObject );
         }
         else
