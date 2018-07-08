@@ -25,11 +25,13 @@ public class EnemyMove
             Vector2 force = new Vector2( 0.0f,0.0f );
             force.x = ( player.transform.position.x >
                 transform.position.x ) ? speed : -speed;
-            body.AddForce( force );
+            body.AddForce( force *
+                Time.deltaTime * dtOffset );
         }
     }
     // 
     Rigidbody2D body;
     GameObject player;
     const float speed = 10.0f;
+    const float dtOffset = 1.0f / 0.01700295f;
 }

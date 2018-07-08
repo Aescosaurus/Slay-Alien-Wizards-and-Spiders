@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class ParticleMove
     :
@@ -14,7 +15,7 @@ public class ParticleMove
     }
     void Update()
     {
-        if( hitGround )
+        // if( hitGround )
         {
             lifetime.Update( Time.deltaTime );
         }
@@ -24,13 +25,14 @@ public class ParticleMove
             Destroy( gameObject );
         }
     }
-    void OnCollisionEnter2D( Collision2D coll )
+    // void OnCollisionEnter2D( Collision2D coll )
+    void OnTriggerEnter2D( Collider2D coll )
     {
-        if( coll.gameObject.layer == 8 )
+        /*if( coll.gameObject.layer == 8 )
         {
             hitGround = true;
         }
-        else if( coll.gameObject.tag == "Player" )
+        else */if( coll.gameObject.tag == "Player" )
         {
             Destroy( gameObject );
         }
@@ -49,5 +51,6 @@ public class ParticleMove
     // 
     const float xSpeed = 4.1f;
     Timer lifetime = new Timer( 2.05f );
-    bool hitGround = false;
+    // bool hitGround = false;
+    const float jumpPower = 7.1f;
 }

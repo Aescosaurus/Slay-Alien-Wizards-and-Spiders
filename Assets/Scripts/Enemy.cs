@@ -16,13 +16,15 @@ public class Enemy
         Assert.IsNotNull( body );
 
         hp -= amount;
-        if( hp < 1 )
+        if( hp < 1 && !dead )
         {
+            dead = true;
+
             ParticleDropper drop = GetComponent<ParticleDropper>();
             if( drop != null )
             {
                 drop.CreateParticles( transform.position,
-                    Random.Range( 3,6 ) );
+                    Random.Range( 4,7 ) );
             }
             Destroy( gameObject );
         }
@@ -34,4 +36,5 @@ public class Enemy
     // 
     [SerializeField] int hp = 10;
     Rigidbody2D body;
+    bool dead = false;
 }

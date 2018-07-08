@@ -30,7 +30,8 @@ public class SmallSpider
             }
 
             body.AddForce( new
-                Vector2( ( float )dir * speed,0.0f ) );
+                Vector2( ( float )dir * speed,0.0f ) *
+                Time.deltaTime * dtOffset );
 
             Vector2 tPos = ( Vector2 )transform.position;
             if( tPos == lastPos &&
@@ -64,4 +65,5 @@ public class SmallSpider
     Timer jumpTimer = new Timer( 3.15f );
     Vector2 lastPos = new Vector2( 0.0f,0.0f );
     Vector2 posBeforeThat = new Vector2( 0.0f,0.0f );
+    const float dtOffset = 1.0f / 0.01700295f;
 }
