@@ -5,7 +5,7 @@ using UnityEngine.Assertions;
 
 public class EnemyMove
     :
-    MonoBehaviour
+    IsOnScreen
 {
     void Start()
     {
@@ -20,7 +20,7 @@ public class EnemyMove
         Assert.IsNotNull( body );
         Assert.IsNotNull( player );
 
-        if( activated )
+        if( IsActivated() )
         {
             Vector2 force = new Vector2( 0.0f,0.0f );
             force.x = ( player.transform.position.x >
@@ -28,17 +28,8 @@ public class EnemyMove
             body.AddForce( force );
         }
     }
-    void OnBecameVisible()
-    {
-        activated = true;
-    }
-    void OnBecameInvisible()
-    {
-        activated = false;
-    }
     // 
     Rigidbody2D body;
     GameObject player;
     const float speed = 10.0f;
-    bool activated = false;
 }

@@ -182,8 +182,11 @@
 Assets/Scripts/Bullet.cs
 Assets/Scripts/Enemy.cs
 Assets/Scripts/EnemyMove.cs
+Assets/Scripts/FallingSpider.cs
+Assets/Scripts/IsOnScreen.cs
 Assets/Scripts/Player.cs
 Assets/Scripts/PlayerMove.cs
 Assets/Scripts/PlayerShoot.cs
+Assets/Scripts/SmallSpider.cs
 Assets/Scripts/Timer.cs
 -lib:"C:\Program Files\Unity\Hub\Editor\2018.1.2f1\Editor\Data\MonoBleedingEdge\lib\mono\unity"

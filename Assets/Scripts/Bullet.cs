@@ -33,7 +33,7 @@ public class Bullet
                 .GetComponent<Enemy>();
             if( script != null )
             {
-                script.Attack( 1,vel * 1.5f );
+                script.Attack( 1,vel );
             }
             Destroy( gameObject );
         }

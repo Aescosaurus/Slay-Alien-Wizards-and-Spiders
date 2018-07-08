@@ -26,6 +26,6 @@ public class Enemy
         }
     }
     // 
-    int hp = 10;
+    [SerializeField] int hp = 10;
     Rigidbody2D body;
 }

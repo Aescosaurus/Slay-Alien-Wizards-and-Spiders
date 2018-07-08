@@ -4,8 +4,6 @@
 -langversion:4
 -out:Temp/Assembly-CSharp.dll
 -nostdlib
--r:Library/ScriptAssemblies/UnityEditor.StandardEvents.dll
--r:Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
 -r:"C:\Program Files\Unity\Hub\Editor\2018.1.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.1.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.AIModule.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.1.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -66,6 +64,8 @@
 -r:"C:\Program Files\Unity\Hub\Editor\2018.1.2f1\Editor\Data\Managed/UnityEngine/UnityEngine.XRModule.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.1.2f1\Editor\Data\Managed/UnityEditor.dll"
 -r:"C:\Program Files\Unity\Hub\Editor\2018.1.2f1\Editor\Data\Managed/Unity.Locator.dll"
+-r:Library/ScriptAssemblies/UnityEditor.StandardEvents.dll
+-r:Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll
 -r:"C:/Program Files/Unity/Hub/Editor/2018.1.2f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.1.2f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2018.1.2f1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
@@ -182,8 +182,11 @@
 Assets/Scripts/Bullet.cs
 Assets/Scripts/Enemy.cs
 Assets/Scripts/EnemyMove.cs
+Assets/Scripts/FallingSpider.cs
+Assets/Scripts/IsOnScreen.cs
 Assets/Scripts/Player.cs
 Assets/Scripts/PlayerMove.cs
 Assets/Scripts/PlayerShoot.cs
+Assets/Scripts/SmallSpider.cs
 Assets/Scripts/Timer.cs
 -lib:"C:\Program Files\Unity\Hub\Editor\2018.1.2f1\Editor\Data\MonoBleedingEdge\lib\mono\unity"

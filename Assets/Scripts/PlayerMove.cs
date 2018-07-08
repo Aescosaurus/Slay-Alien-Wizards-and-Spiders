@@ -80,9 +80,16 @@ public class PlayerMove
         minJump.Reset();
         jumping = false;
     }
+    public void StopJumping()
+    {
+        FinishJump();
+    }
     void OnCollisionEnter2D( Collision2D coll )
     {
-        canJump = true;
+        if( coll.gameObject.layer == 8 )
+        {
+            canJump = true;
+        }
     }
     float GetDT()
     {
@@ -95,7 +102,7 @@ public class PlayerMove
     const float jumpPower = 45.4f;
     bool jumping = false;
     bool canJump = false;
-    Timer minJump = new Timer( 0.11f );
+    Timer minJump = new Timer( 0.21f );
     Timer maxJump = new Timer( 0.75f );
     Camera cam;
     [SerializeField] GameObject walls;
