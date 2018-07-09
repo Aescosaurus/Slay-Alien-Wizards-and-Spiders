@@ -7,7 +7,7 @@ public class SmallSpider
     :
     IsOnScreen
 {
-    void Start()
+    void Awake()
     {
         dir = GetRandDir();
         body = GetComponent<Rigidbody2D>();
@@ -20,7 +20,7 @@ public class SmallSpider
         {
             jumpTimer.Update( Time.deltaTime );
 
-            if( jumpTimer.IsDone() )
+            if( jumpTimer.IsDone() && willJump )
             {
                 body.AddForce( new
                     Vector2( 0.0f,jumpPower ),
@@ -28,6 +28,7 @@ public class SmallSpider
 
                 jumpTimer.Reset();
             }
+            willJump = false;
 
             body.AddForce( new
                 Vector2( ( float )dir * speed,0.0f ) *
@@ -52,10 +53,23 @@ public class SmallSpider
     void OnCollisionExit2D( Collision2D coll )
     {
         // dir = GetRandDir();
+        willJump = true;
     }
     int GetRandDir()
     {
         return( ( Random.Range( 0,10 ) > 5 ) ? 1 : -1 );
+    }
+    public void Jump()
+    {
+        Assert.IsNotNull( body );
+        body.AddForce( GetForceDir(),ForceMode2D.Impulse );
+    }
+    Vector2 GetForceDir()
+    {
+        float randX = Random.Range( -2.1f,2.1f );
+        float randY = Random.Range( 5.1f,12.1f );
+
+        return ( new Vector2( randX,randY ) );
     }
     // 
     Rigidbody2D body;
@@ -66,4 +80,5 @@ public class SmallSpider
     Vector2 lastPos = new Vector2( 0.0f,0.0f );
     Vector2 posBeforeThat = new Vector2( 0.0f,0.0f );
     const float dtOffset = 1.0f / 0.01700295f;
+    bool willJump = false;
 }

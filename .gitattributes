@@ -61,3 +61,10 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+###############################################################################
+# Only look at my actual code files instead of BS
+#  Unity generated ones.
+###############################################################################
+* linguist-vendored
+*.cs linguist-vendored=false

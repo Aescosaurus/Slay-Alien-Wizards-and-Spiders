@@ -66,7 +66,7 @@ public class FallingSpider
     Rigidbody2D body;
     bool fell = false;
     const float xTolerance = 1.61f;
-    const float yTolerance = 2.5f;
-    Timer jumpReset = new Timer( 5.0f );
+    const float yTolerance = 3.5f;
+    Timer jumpReset = new Timer( 3.5f );
     const float jumpPower = 8.7f;
 }

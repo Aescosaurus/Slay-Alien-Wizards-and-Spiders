@@ -7,4 +7,5 @@ public class PrefabManagerScript
     MonoBehaviour
 {
     public GameObject particle;
+    public GameObject smallSpider;
 }
