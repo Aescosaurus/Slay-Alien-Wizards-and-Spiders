@@ -22,12 +22,15 @@ public class BigSpider
         PrefabManagerScript script = list[0]
             .GetComponent<PrefabManagerScript>();
         babySpider = script.smallSpider;
+
+        body = GetComponent<Rigidbody2D>();
     }
     void Update()
     {
         Assert.IsNotNull( player );
         Assert.IsNotNull( enemyScript );
         Assert.IsNotNull( babySpider );
+        Assert.IsNotNull( body );
 
         if( ( ( Vector2 )player.transform.position -
             ( Vector2 )transform.position )
@@ -48,11 +51,21 @@ public class BigSpider
         }
 
         // TODO: Make this guy wiggle around a bit.
+        jumpTimer.Update( Time.deltaTime );
+        if( jumpTimer.IsDone() )
+        {
+            jumpTimer.Reset();
+            body.AddForce( new Vector2( 0.0f,jumpPower ),
+                ForceMode2D.Impulse );
+        }
     }
     // 
     GameObject player;
     Enemy enemyScript;
     GameObject babySpider;
+    Rigidbody2D body;
     const float triggerDist = 5.2f;
     const float triggerDistSq = triggerDist * triggerDist;
+    Timer jumpTimer = new Timer( 2.2f );
+    const float jumpPower = 4.3f;
 }

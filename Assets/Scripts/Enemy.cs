@@ -28,13 +28,14 @@ public class Enemy
             }
             Destroy( gameObject );
         }
-        else
+        else if( willKnockback )
         {
             body.AddForce( force,ForceMode2D.Impulse );
         }
     }
     // 
     [SerializeField] int hp = 10;
+    [SerializeField] bool willKnockback = true;
     Rigidbody2D body;
     bool dead = false;
 }
