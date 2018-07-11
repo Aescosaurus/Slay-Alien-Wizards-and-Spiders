@@ -58,9 +58,11 @@
      <Compile Include="Assets\Scripts\EasyEnemy.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
+     <Compile Include="Assets\Scripts\FadeOutOnPress.cs" />
      <Compile Include="Assets\Scripts\FallingSpider.cs" />
      <Compile Include="Assets\Scripts\FixCameraAspect.cs" />
      <Compile Include="Assets\Scripts\FlyingSpider.cs" />
+     <Compile Include="Assets\Scripts\HideMouse.cs" />
      <Compile Include="Assets\Scripts\IsOnScreen.cs" />
      <Compile Include="Assets\Scripts\ParticleDropper.cs" />
      <Compile Include="Assets\Scripts\ParticleMove.cs" />

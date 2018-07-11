@@ -627,6 +627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 381284209}
   - component: {fileID: 381284210}
+  - component: {fileID: 381284211}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -692,6 +693,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &381284211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381284208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520e53ce42b17384b82ef86138be7edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: Move Right
 --- !u!1 &434533393
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +774,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 434533393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.17, y: 4.1, z: 0}
+  m_LocalPosition: {x: -12.98, y: 4.38, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -910,6 +923,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -984,6 +998,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664aefa338c26bc48bbcd998901ced55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &532675162
 Prefab:
   m_ObjectHideFlags: 0
@@ -1577,7 +1602,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4233513655341746, guid: 6421e1fb8977119429897432823824d7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -10.11
+      value: -8.84
       objectReference: {fileID: 0}
     - target: {fileID: 4233513655341746, guid: 6421e1fb8977119429897432823824d7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2192,6 +2217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1549341432}
   - component: {fileID: 1549341433}
+  - component: {fileID: 1549341434}
   m_Layer: 0
   m_Name: Arrow (2)
   m_TagString: Untagged
@@ -2257,6 +2283,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1549341434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549341431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520e53ce42b17384b82ef86138be7edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: Jump
 --- !u!1 &1584696799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2305,6 +2343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1654784236}
   - component: {fileID: 1654784237}
+  - component: {fileID: 1654784238}
   m_Layer: 0
   m_Name: Arrow (1)
   m_TagString: Untagged
@@ -2370,6 +2409,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1654784238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1654784235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520e53ce42b17384b82ef86138be7edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axis: Move Left
 --- !u!1 &1656286925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,6 +2450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   act1Maps:
   - {fileID: 1492916605436846, guid: b0b31ec18ede18e41be704d490fb0faf, type: 2}
+  - {fileID: 1777472675600998, guid: db2e4d884316e69448b19f85d621d14a, type: 2}
   initialLevel: {fileID: 1584696799}
 --- !u!4 &1656286927
 Transform:

@@ -35,8 +35,6 @@ public class PlayerMove
 
         body.AddForce( -body.velocity * 3.0f * dt );
 
-        jumpTimer.Update( Time.deltaTime );
-
         if( Input.GetAxis( "Jump" ) > 0.0f )
         {
             if( canJump )
@@ -104,7 +102,6 @@ public class PlayerMove
     const float jumpPower = 45.4f;
     bool jumping = false;
     bool canJump = false;
-    Timer jumpTimer = new Timer( 1.0f );
     Timer minJump = new Timer( 0.21f );
     Timer maxJump = new Timer( 0.75f );
     Camera cam;

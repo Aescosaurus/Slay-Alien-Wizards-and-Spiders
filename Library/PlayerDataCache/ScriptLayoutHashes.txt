@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Aesc/Desktop/bop/bop.exe
+C:/Users/Aesc/Desktop/bopp/bopp.exe
 SceneListBegin?
 Assets/Scenes/Main.unity
 SceneListEnd?
@@ -163,3 +163,6 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FallingSpider
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ParticleDropper
 fae3446955ccb4f2caef018fd79b0bed Assembly-CSharp.dll:.EasyEnemy
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.AimerScript
+a2efb0db652b8114d1ae7dd9a600d626 Assembly-CSharp.dll:.FadeOutOnPress
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HideMouse

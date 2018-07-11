@@ -17,12 +17,27 @@ public class ChangeLevel
 
         theLevel = initialLevel;
     }
+    void Update()
+    {
+        if( Input.GetKeyUp( KeyCode.Space ) )
+        {
+            NextLevel();
+        }
+    }
     public void NextLevel()
     {
         Assert.IsNotNull( player );
         Destroy( theLevel );
-        theLevel = Instantiate( act1Maps[Random
-            .Range( 0,act1Maps.Length - 1 )] );
+
+        int nMap = 0;
+        do
+        {
+            nMap = Random.Range( 0,act1Maps.Length );
+        }
+        while( usedMaps.Contains( nMap ) );
+        usedMaps.Add( nMap );
+
+        theLevel = Instantiate( act1Maps[nMap] );
 
         theLevel.transform.position = Vector3.zero;
 
@@ -32,6 +47,7 @@ public class ChangeLevel
     }
     // 
     [SerializeField] GameObject[] act1Maps;
+    List<int> usedMaps = new List<int>();
     Vector2 playerStart = new Vector2( 0.0f,0.0f );
     GameObject player;
     int nCurLevel = 0;
