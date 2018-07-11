@@ -2448,10 +2448,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40ef7a1016fd8a4c8bfc3510c8155f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialLevel: {fileID: 1584696799}
   act1Maps:
   - {fileID: 1492916605436846, guid: b0b31ec18ede18e41be704d490fb0faf, type: 2}
   - {fileID: 1777472675600998, guid: db2e4d884316e69448b19f85d621d14a, type: 2}
-  initialLevel: {fileID: 1584696799}
+  - {fileID: 1525669820905770, guid: e3abf3bd9b73fa74eb1e25d70b9e9879, type: 2}
+  act2Maps: []
 --- !u!4 &1656286927
 Transform:
   m_ObjectHideFlags: 0

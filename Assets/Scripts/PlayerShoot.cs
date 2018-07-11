@@ -19,13 +19,27 @@ public class PlayerShoot
         Assert.IsNotNull( cam );
         refire.Update( Time.deltaTime );
 
-        bool clicking = Input.GetAxis( "Attack" ) > 0.0f;
+        {
+            float amount = Input.GetAxis( "Auto Attack" );
+            if( amount > 0.0f && canToggle )
+            {
+                autoAttack = !autoAttack;
+                canToggle = false;
+            }
+            else if( amount == 0.0f )
+            {
+                canToggle = true;
+            }
+        }
 
-        if( !clicking )
+        bool clicking = Input.GetAxis( "Attack" ) > 0.0f ||
+            autoAttack;
+
+        if( !clicking || autoAttack )
         {
             canClick = true;
         }
-        else if( canClick && refire.IsDone() )
+        if( clicking && canClick && refire.IsDone() )
         {
             refire.Reset();
             ShootAt( GetMousePos() );
@@ -65,4 +79,6 @@ public class PlayerShoot
     Camera cam;
     Timer refire = new Timer( 0.3f );
     bool canClick = false;
+    bool autoAttack = false;
+    bool canToggle = false;
 }

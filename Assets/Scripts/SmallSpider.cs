@@ -76,7 +76,7 @@ public class SmallSpider
     int dir = -1;
     const float speed = 10.0f;
     const float jumpPower = 4.61542f;
-    Timer jumpTimer = new Timer( 3.15f );
+    Timer jumpTimer = new Timer( 2.15f );
     Vector2 lastPos = new Vector2( 0.0f,0.0f );
     Vector2 posBeforeThat = new Vector2( 0.0f,0.0f );
     const float dtOffset = 1.0f / 0.01700295f;

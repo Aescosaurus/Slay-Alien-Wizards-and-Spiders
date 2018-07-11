@@ -28,18 +28,18 @@ public class ParticleMove
     // void OnCollisionEnter2D( Collision2D coll )
     void OnTriggerEnter2D( Collider2D coll )
     {
-        /*if( coll.gameObject.layer == 8 )
-        {
-            hitGround = true;
-        }
-        else */if( coll.gameObject.tag == "Player" )
-        {
-            Destroy( gameObject );
-        }
-        else if( coll.gameObject.tag == "Enemy" )
-        {
-            Destroy( gameObject );
-        }
+        // /*if( coll.gameObject.layer == 8 )
+        // {
+        //     hitGround = true;
+        // }
+        // else */if( coll.gameObject.tag == "Player" )
+        // {
+        //     Destroy( gameObject );
+        // }
+        // else if( coll.gameObject.tag == "Enemy" )
+        // {
+        //     Destroy( gameObject );
+        // }
     }
     Vector2 GetForceDir()
     {

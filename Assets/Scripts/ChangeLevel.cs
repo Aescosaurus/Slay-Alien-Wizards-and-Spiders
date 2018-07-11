@@ -27,30 +27,46 @@ public class ChangeLevel
     public void NextLevel()
     {
         Assert.IsNotNull( player );
-        Destroy( theLevel );
 
-        int nMap = 0;
-        do
+        if( nCurLevel > levelsToProgress )
         {
-            nMap = Random.Range( 0,act1Maps.Length );
+            nCurLevel = 0;
+            usedMaps.Clear();
+            ++currentAct;
         }
-        while( usedMaps.Contains( nMap ) );
-        usedMaps.Add( nMap );
 
-        theLevel = Instantiate( act1Maps[nMap] );
-
-        theLevel.transform.position = Vector3.zero;
+        Destroy( theLevel );
 
         player.transform.position = ( Vector3 )playerStart;
 
+        if( currentAct == 1 ) LoadLevel( act1Maps );
+        else if( currentAct == 2 ) LoadLevel( act2Maps );
+
+        theLevel.transform.position = Vector3.zero;
+
         ++nCurLevel;
     }
+    void LoadLevel( GameObject[] mapsList )
+    {
+        int nMap = 0;
+        do
+        {
+            nMap = Random.Range( 0,mapsList.Length );
+        }
+        while( usedMaps.Contains( nMap ) );
+
+        usedMaps.Add( nMap );
+        theLevel = Instantiate( mapsList[nMap] );
+    }
     // 
+    [SerializeField] GameObject initialLevel;
     [SerializeField] GameObject[] act1Maps;
+    [SerializeField] GameObject[] act2Maps;
     List<int> usedMaps = new List<int>();
     Vector2 playerStart = new Vector2( 0.0f,0.0f );
     GameObject player;
     int nCurLevel = 0;
-    [SerializeField] GameObject initialLevel;
+    const int levelsToProgress = 3;
+    int currentAct = 1;
     GameObject theLevel;
 }
