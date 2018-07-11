@@ -51,8 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AimerScript.cs" />
      <Compile Include="Assets\Scripts\BigSpider.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
+     <Compile Include="Assets\Scripts\ChangeLevel.cs" />
+     <Compile Include="Assets\Scripts\EasyEnemy.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
      <Compile Include="Assets\Scripts\FallingSpider.cs" />
@@ -64,6 +67,7 @@
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\PlayerShoot.cs" />
+     <Compile Include="Assets\Scripts\PortalScript.cs" />
      <Compile Include="Assets\Scripts\PrefabManagerScript.cs" />
      <Compile Include="Assets\Scripts\SmallSpider.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />

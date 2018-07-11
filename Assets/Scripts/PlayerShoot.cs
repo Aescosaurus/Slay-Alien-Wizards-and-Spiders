@@ -16,6 +16,7 @@ public class PlayerShoot
     // Update is called once per frame
     void Update()
     {
+        Assert.IsNotNull( cam );
         refire.Update( Time.deltaTime );
 
         bool clicking = Input.GetAxis( "Attack" ) > 0.0f;

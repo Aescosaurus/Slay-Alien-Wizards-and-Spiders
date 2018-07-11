@@ -7,6 +7,7 @@ TagManager:
   - Bullet
   - Enemy
   - PrefabManager
+  - LevelChanger
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Bullet
   - Enemy
   - Particles
-  - 
+  - EnemyNoCollide
   - 
   - 
   - 
@@ -41,6 +42,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floors
+    uniqueID: 3769773731
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 3282825449
     locked: 0

@@ -19,12 +19,21 @@ public class Player
 
         if( coll.gameObject.tag == "Enemy" )
         {
-            // Hurt!
-            body.AddForce( new Vector2( 0.0f,12.1f ),
-                ForceMode2D.Impulse );
-            moveScript.StopJumping();
-            print( "Ouch!" );
+            Attack();
+
+            body.AddForce( new
+                Vector2( -( ( coll.transform.position -
+                transform.position ).normalized * 8.0f ).x,
+                0.0f ),ForceMode2D.Impulse );
         }
+    }
+    public void Attack()
+    {
+        // Hurt!
+        body.AddForce( new Vector2( 0.0f,9.1f ),
+            ForceMode2D.Impulse );
+        moveScript.StopJumping();
+        print( "Ouch!" );
     }
     // 
     Rigidbody2D body;

@@ -18,7 +18,8 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BigSpider
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FixCameraAspect
-0160b2582f25d0dd67da7e696f501a6d Assembly-CSharp.dll:.Enemy
+fae3446955ccb4f2caef018fd79b0bed Assembly-CSharp.dll:.Enemy
+450fb9aaa2d9b0d64c67839f36886069 Assembly-CSharp.dll:.ChangeLevel
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -123,6 +124,8 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ParticleMove
 0f943198429c93609e841212d11b4efc Assembly-CSharp.dll:.PlayerShoot
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PortalScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FlyingSpider
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -159,3 +162,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 2115e2970ed0d771ed81f784a019d125 Assembly-CSharp.dll:.PlayerMove
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FallingSpider
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ParticleDropper
+fae3446955ccb4f2caef018fd79b0bed Assembly-CSharp.dll:.EasyEnemy
