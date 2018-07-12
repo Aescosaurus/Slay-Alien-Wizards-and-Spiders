@@ -19,20 +19,22 @@ public class Player
 
         if( coll.gameObject.tag == "Enemy" )
         {
-            Attack();
-
-            body.AddForce( new
-                Vector2( -( ( coll.transform.position -
-                transform.position ).normalized * 8.0f ).x,
-                0.0f ),ForceMode2D.Impulse );
+            Attack( coll.transform.position );
         }
     }
-    public void Attack()
+    public void Attack( Vector2 pos )
     {
         // Hurt!
         body.AddForce( new Vector2( 0.0f,9.1f ),
             ForceMode2D.Impulse );
         moveScript.StopJumping();
+
+        body.AddForce( new
+            Vector2( -( ( pos -
+            ( Vector2 )transform.position )
+            .normalized * 8.0f ).x,0.0f ),
+            ForceMode2D.Impulse );
+
         print( "Ouch!" );
     }
     // 

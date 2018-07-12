@@ -54,6 +54,7 @@ public class ChangeLevel
             nMap = Random.Range( 0,mapsList.Length );
         }
         while( usedMaps.Contains( nMap ) );
+        print( nMap );
 
         usedMaps.Add( nMap );
         theLevel = Instantiate( mapsList[nMap] );

@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AdeptWizard.cs" />
      <Compile Include="Assets\Scripts\AimerScript.cs" />
      <Compile Include="Assets\Scripts\BigSpider.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
@@ -64,6 +65,7 @@
      <Compile Include="Assets\Scripts\FlyingSpider.cs" />
      <Compile Include="Assets\Scripts\HideMouse.cs" />
      <Compile Include="Assets\Scripts\IsOnScreen.cs" />
+     <Compile Include="Assets\Scripts\MagicMove.cs" />
      <Compile Include="Assets\Scripts\ParticleDropper.cs" />
      <Compile Include="Assets\Scripts\ParticleMove.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />

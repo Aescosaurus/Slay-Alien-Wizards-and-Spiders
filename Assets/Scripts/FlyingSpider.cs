@@ -55,7 +55,8 @@ public class FlyingSpider
     {
         if( other.tag == "Player" )
         {
-            other.GetComponent<Player>().Attack();
+            other.GetComponent<Player>()
+                .Attack( transform.position );
         }
     }
     // 

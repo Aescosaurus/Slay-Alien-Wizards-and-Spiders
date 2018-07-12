@@ -8,4 +8,5 @@ public class PrefabManagerScript
 {
     public GameObject particle;
     public GameObject smallSpider;
+    public GameObject mageBullet;
 }
