@@ -11,10 +11,7 @@ public class FlyingSpider
     {
         body = GetComponent<Rigidbody2D>();
 
-        GameObject[] players = GameObject
-            .FindGameObjectsWithTag( "Player" );
-        Assert.IsTrue( players.Length == 1 );
-        player = players[0];
+        player = Utility.FindInScene( "Player" );
 
         baseY = transform.position.y;
 

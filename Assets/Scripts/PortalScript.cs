@@ -9,10 +9,8 @@ public class PortalScript
 {
     void Start()
     {
-        GameObject[] changers = GameObject
-            .FindGameObjectsWithTag( "LevelChanger" );
-        Assert.IsTrue( changers.Length == 1 );
-        levelChanger = changers[0]
+        levelChanger = Utility
+            .FindInScene( "LevelChanger" )
             .GetComponent<ChangeLevel>();
     }
     void OnCollisionEnter2D( Collision2D coll )

@@ -9,11 +9,8 @@ public class ChangeLevel
 {
     void Start()
     {
-        GameObject[] players = GameObject
-            .FindGameObjectsWithTag( "Player" );
-        Assert.IsTrue( players.Length == 1 );
-        player = players[0];
-        playerStart = players[0].transform.position;
+        player = Utility.FindInScene( "Player" );
+        playerStart = player.transform.position;
 
         theLevel = initialLevel;
     }

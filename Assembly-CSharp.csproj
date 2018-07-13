@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scripts\RogueEnemy.cs" />
      <Compile Include="Assets\Scripts\SmallSpider.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
+     <Compile Include="Assets\Scripts\Utility.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Aesc/Desktop/Slay-All-Wizards-and-Spiders/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

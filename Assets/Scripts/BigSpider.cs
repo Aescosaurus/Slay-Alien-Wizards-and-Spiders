@@ -9,19 +9,13 @@ public class BigSpider
 {
     void Start()
     {
-        GameObject[] players = GameObject
-            .FindGameObjectsWithTag( "Player" );
-        Assert.IsTrue( players.Length == 1 );
-        player = players[0];
+        player = Utility.FindInScene( "Player" );
 
         enemyScript = GetComponent<Enemy>();
 
-        GameObject[] list = GameObject
-            .FindGameObjectsWithTag( "PrefabManager" );
-        Assert.IsTrue( list.Length == 1 );
-        PrefabManagerScript script = list[0]
-            .GetComponent<PrefabManagerScript>();
-        babySpider = script.smallSpider;
+        babySpider = Utility.FindInScene( "PrefabManager" )
+            .GetComponent<PrefabManagerScript>()
+            .smallSpider;
 
         body = GetComponent<Rigidbody2D>();
     }

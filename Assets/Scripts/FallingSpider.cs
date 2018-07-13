@@ -12,10 +12,7 @@ public class FallingSpider
         // startPos = ( Vector2 )transform.position;
         body = GetComponent<Rigidbody2D>();
 
-        GameObject[] players = GameObject
-            .FindGameObjectsWithTag( "Player" );
-        Assert.IsTrue( players.Length == 1 );
-        player = players[0];
+        player = Utility.FindInScene( "Player" );
 
         FreezePosition();
     }

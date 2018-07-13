@@ -9,12 +9,9 @@ public class ParticleDropper
 {
     void Start()
     {
-        GameObject[] list = GameObject
-            .FindGameObjectsWithTag( "PrefabManager" );
-        Assert.IsTrue( list.Length == 1 );
-        PrefabManagerScript script = list[0]
-            .GetComponent<PrefabManagerScript>();
-        particle = script.particle;
+        particle = Utility.FindInScene( "PrefabManager" )
+            .GetComponent<PrefabManagerScript>()
+            .particle;
     }
     // void OnDestroy()
     // {

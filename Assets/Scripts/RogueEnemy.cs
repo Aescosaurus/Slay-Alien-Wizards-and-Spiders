@@ -9,17 +9,11 @@ public class RogueEnemy
 {
     void Start()
     {
-        GameObject[] list = GameObject
-            .FindGameObjectsWithTag( "PrefabManager" );
-        Assert.IsTrue( list.Length == 1 );
-        PrefabManagerScript script = list[0]
-            .GetComponent<PrefabManagerScript>();
-        bullet = script.mageBullet;
+        bullet = Utility.FindInScene( "PrefabManager" )
+            .GetComponent<PrefabManagerScript>()
+            .mageBullet;
 
-        GameObject[] players = GameObject
-            .FindGameObjectsWithTag( "Player" );
-        Assert.IsTrue( players.Length == 1 );
-        player = players[0];
+        player = Utility.FindInScene( "Player" );
     }
     void Update()
     {

@@ -10,10 +10,8 @@ public class EnemyMove
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        GameObject[] players = GameObject
-            .FindGameObjectsWithTag( "Player" );
-        Assert.IsTrue( players.Length == 1 );
-        player = players[0];
+
+        player = Utility.FindInScene( "Player" );
     }
     void Update()
     {
