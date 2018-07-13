@@ -33,6 +33,11 @@ public class MagicMove
         Assert.IsNotNull( body );
         body.AddForce( vel * speed,ForceMode2D.Impulse );
     }
+    public void SetPosAndVel( Vector2 pos,Vector2 vel )
+    {
+        transform.position = ( Vector3 )pos;
+        SetVel( vel );
+    }
     // 
     Rigidbody2D body;
     Timer lifetime = new Timer( 2.4f );

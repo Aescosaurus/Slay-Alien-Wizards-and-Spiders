@@ -37,11 +37,13 @@ public class AdeptWizard
                 transform.position.x )
             {
                 vel.x = -1.0f;
+                ScaleBy( -1 );
             }
             else if( player.transform.position.x >
                 transform.position.x )
             {
                 vel.x = 1.0f;
+                ScaleBy( 1 );
             }
 
             GameObject bull = Instantiate( bullet );
@@ -49,8 +51,14 @@ public class AdeptWizard
             bull.GetComponent<MagicMove>().SetVel( vel );
         }
     }
+    void ScaleBy( int dir )
+    {
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Abs( scale.x ) * ( float )dir;
+        transform.localScale = scale;
+    }
     // 
-    Timer refireTime = new Timer( 3.5f );
+    Timer refireTime = new Timer( 1.1f );
     GameObject bullet;
     GameObject player;
     const float yTolerance = 0.783f;
