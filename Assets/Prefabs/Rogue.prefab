@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 30
   willKnockback: 1
+  forceOffset: 0.6
 --- !u!114 &114443341362576182
 MonoBehaviour:
   m_ObjectHideFlags: 1

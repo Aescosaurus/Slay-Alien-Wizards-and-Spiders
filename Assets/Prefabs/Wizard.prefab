@@ -125,6 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 25
   willKnockback: 1
+  forceOffset: 0.7
 --- !u!212 &212981474781362938
 SpriteRenderer:
   m_ObjectHideFlags: 1

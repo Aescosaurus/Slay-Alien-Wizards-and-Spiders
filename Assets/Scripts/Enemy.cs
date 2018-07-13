@@ -30,12 +30,14 @@ public class Enemy
         }
         else if( willKnockback )
         {
-            body.AddForce( force,ForceMode2D.Impulse );
+            body.AddForce( force * forceOffset,
+                ForceMode2D.Impulse );
         }
     }
     // 
     [SerializeField] int hp = 10;
     [SerializeField] bool willKnockback = true;
+    [SerializeField] float forceOffset = 1.0f;
     Rigidbody2D body;
     bool dead = false;
 }
