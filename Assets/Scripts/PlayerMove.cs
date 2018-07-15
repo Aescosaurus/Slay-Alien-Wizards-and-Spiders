@@ -56,6 +56,11 @@ public class PlayerMove
             if( maxJump.IsDone() ) FinishJump();
         }
 
+        // if( Input.GetAxis( "Jump" ) == 0.0f )
+        // {
+        //     canJump = true;
+        // }
+
         {
             Vector3 camPos = new Vector3
             (
@@ -97,7 +102,7 @@ public class PlayerMove
     }
     // 
     const float dtOffset = 1.0f / 0.01700295f;
-    const float speed = 20.0f;
+    const float speed = 30.0f; // From 20.
     Rigidbody2D body;
     const float jumpPower = 45.4f;
     bool jumping = false;

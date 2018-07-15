@@ -76,6 +76,8 @@
      <Compile Include="Assets\Scripts\PrefabManagerScript.cs" />
      <Compile Include="Assets\Scripts\RogueEnemy.cs" />
      <Compile Include="Assets\Scripts\SmallSpider.cs" />
+     <Compile Include="Assets\Scripts\SpawnWhenNoMoreEnemies.cs" />
+     <Compile Include="Assets\Scripts\SpiderBoss.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\Utility.cs" />
  <Reference Include="UnityEditor.StandardEvents">

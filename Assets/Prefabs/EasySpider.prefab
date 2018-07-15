@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50731321073101450}
   - component: {fileID: 61611718188965966}
   - component: {fileID: 114757787559207882}
+  - component: {fileID: 114969440865665528}
   m_Layer: 10
   m_Name: EasySpider
   m_TagString: Enemy
@@ -101,6 +102,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   willKnockback: 1
+  forceOffset: 1
+--- !u!114 &114969440865665528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1401866698923586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13de139fe9ab22a4eaf9f8d87ce0f41d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212628096259405770
 SpriteRenderer:
   m_ObjectHideFlags: 1

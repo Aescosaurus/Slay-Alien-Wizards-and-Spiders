@@ -27,9 +27,26 @@ public class ChangeLevel
 
         if( nCurLevel > levelsToProgress )
         {
-            nCurLevel = 0;
+            nCurLevel = 1;
             usedMaps.Clear();
+
+            Destroy( theLevel );
+            player.transform.position = ( Vector3 )playerStart;
+
+            if( currentAct == 1 )
+            {
+                theLevel = Instantiate( act1BossRoom );
+            }
+            else if( currentAct == 2 )
+            {
+                theLevel = Instantiate( act2BossRoom );
+            }
+
             ++currentAct;
+
+            theLevel.transform.position = Vector3.zero;
+
+            return;
         }
 
         Destroy( theLevel );
@@ -60,10 +77,12 @@ public class ChangeLevel
     [SerializeField] GameObject initialLevel;
     [SerializeField] GameObject[] act1Maps;
     [SerializeField] GameObject[] act2Maps;
+    [SerializeField] GameObject act1BossRoom;
+    [SerializeField] GameObject act2BossRoom;
     List<int> usedMaps = new List<int>();
     Vector2 playerStart = new Vector2( 0.0f,0.0f );
     GameObject player;
-    int nCurLevel = 0;
+    int nCurLevel = 1;
     const int levelsToProgress = 3;
     int currentAct = 1;
     GameObject theLevel;
