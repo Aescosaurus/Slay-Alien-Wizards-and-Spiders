@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{16B6463A-C9CD-EFED-5429-8C07FDE57051}</ProjectGuid>
+    <ProjectGuid>{C5AD0CA8-DCF6-93A7-616D-E1966A756081}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\FlyingSpider.cs" />
      <Compile Include="Assets\Scripts\HideMouse.cs" />
      <Compile Include="Assets\Scripts\IsOnScreen.cs" />
+     <Compile Include="Assets\Scripts\MachineGunner.cs" />
      <Compile Include="Assets\Scripts\MagicMove.cs" />
      <Compile Include="Assets\Scripts\ParticleDropper.cs" />
      <Compile Include="Assets\Scripts\ParticleMove.cs" />
@@ -81,10 +82,10 @@
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\Utility.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Aesc/Desktop/Slay-All-Wizards-and-Spiders/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Aesc/Desktop/Slay-Alien-Wizards-and-Spiders/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Aesc/Desktop/Slay-All-Wizards-and-Spiders/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Aesc/Desktop/Slay-Alien-Wizards-and-Spiders/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
