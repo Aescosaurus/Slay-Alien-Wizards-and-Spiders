@@ -25,7 +25,8 @@ public class ChangeLevel
     {
         Assert.IsNotNull( player );
 
-        if( nCurLevel > levelsToProgress )
+        if( nCurLevel > levelsToProgress ||
+            ( nCurLevel > 1 && currentAct == 3 ) )
         {
             nCurLevel = 1;
             usedMaps.Clear();
@@ -41,6 +42,10 @@ public class ChangeLevel
             {
                 theLevel = Instantiate( act2BossRoom );
             }
+            else if( currentAct == 3 )
+            {
+                theLevel = Instantiate( act3BossRoom );
+            }
 
             ++currentAct;
 
@@ -55,6 +60,7 @@ public class ChangeLevel
 
         if( currentAct == 1 ) LoadLevel( act1Maps );
         else if( currentAct == 2 ) LoadLevel( act2Maps );
+        else if( currentAct == 3 ) LoadLevel( act3Maps );
 
         theLevel.transform.position = Vector3.zero;
 
@@ -77,8 +83,10 @@ public class ChangeLevel
     [SerializeField] GameObject initialLevel;
     [SerializeField] GameObject[] act1Maps;
     [SerializeField] GameObject[] act2Maps;
+    [SerializeField] GameObject[] act3Maps;
     [SerializeField] GameObject act1BossRoom;
     [SerializeField] GameObject act2BossRoom;
+    [SerializeField] GameObject act3BossRoom;
     List<int> usedMaps = new List<int>();
     Vector2 playerStart = new Vector2( 0.0f,0.0f );
     GameObject player;
