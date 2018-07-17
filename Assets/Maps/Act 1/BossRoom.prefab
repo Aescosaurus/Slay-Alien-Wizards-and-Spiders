@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212472991042245660}
   - component: {fileID: 50470302314717098}
   - component: {fileID: 61997917737564666}
-  - component: {fileID: 114466153936551080}
+  - component: {fileID: 114624727436089490}
   - component: {fileID: 114120830802911988}
   - component: {fileID: 114159566196443984}
+  - component: {fileID: 114115758898128400}
   m_Layer: 10
   m_Name: BossSpider
   m_TagString: Enemy
@@ -592,6 +593,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16050363, y: 0.14027911}
   m_EdgeRadius: 0
+--- !u!114 &114115758898128400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1042001218349496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c5db54183dbd948b7546a1f4caafbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  willKnockback: 1
+  forceOffset: 0
 --- !u!114 &114120830802911988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -614,7 +629,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28705647911a0094f8d898290fe57732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114466153936551080
+--- !u!114 &114493375686928962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1493582086083534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b7e70d8b12c41a41bb0595f621d3352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114624727436089490
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -628,17 +654,6 @@ MonoBehaviour:
   hp: 200
   willKnockback: 1
   forceOffset: 0
---- !u!114 &114493375686928962
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1493582086083534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b7e70d8b12c41a41bb0595f621d3352, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114798882381769090
 MonoBehaviour:
   m_ObjectHideFlags: 1

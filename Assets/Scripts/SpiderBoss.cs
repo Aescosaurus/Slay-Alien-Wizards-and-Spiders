@@ -21,6 +21,8 @@ public class SpiderBoss
         Assert.IsNotNull( body );
         Assert.IsNotNull( babySpider );
 
+        if( dead ) return;
+
         if( canJump )
         {
             Vector3 vel = ( player.transform.position -
@@ -63,6 +65,10 @@ public class SpiderBoss
             canJump = true;
         }
     }
+    public void Kill()
+    {
+        dead = true;
+    }
     // 
     GameObject player;
     Rigidbody2D body;
@@ -71,4 +77,5 @@ public class SpiderBoss
     bool canJump = false;
     const float jumpPower = 12.5f;
     const float speed = 9.5f;
+    bool dead = false;
 }

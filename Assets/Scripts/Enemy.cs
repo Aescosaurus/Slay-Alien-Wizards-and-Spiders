@@ -11,6 +11,10 @@ public class Enemy
     {
         body = GetComponent<Rigidbody2D>();
     }
+    // void Update()
+    // {
+    //     // Don't put stuff here cuz I override it.
+    // }
     public void Attack( int amount,Vector2 force )
     {
         Assert.IsNotNull( body );
@@ -26,12 +30,27 @@ public class Enemy
                 drop.CreateParticles( transform.position,
                     Random.Range( 4,7 ) );
             }
-            Destroy( gameObject );
+            // Destroy( gameObject );
+            DestroyThis();
         }
         else if( willKnockback )
         {
             body.AddForce( force * forceOffset,
                 ForceMode2D.Impulse );
+        }
+    }
+    void DestroyThis()
+    {
+        var bossScript = GetComponent<Boss1>();
+        if( bossScript != null )
+        {
+            bossScript.DestroyMe();
+            var spidBoss = GetComponent<SpiderBoss>();
+            spidBoss.Kill();
+        }
+        else
+        {
+            Destroy( gameObject );
         }
     }
     // 
