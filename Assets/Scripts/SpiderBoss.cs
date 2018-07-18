@@ -67,7 +67,18 @@ public class SpiderBoss
     }
     public void Kill()
     {
+        print( "BOP!" );
         dead = true;
+        GameObject[] enemies = GameObject
+            .FindGameObjectsWithTag( "Enemy" );
+        foreach( GameObject e in enemies )
+        {
+            if( e.GetComponent<SpiderBoss>() == null )
+            {
+                e.GetComponent<Enemy>().Attack( 999,
+                    new Vector2( 0.0f,0.0f ) );
+            }
+        }
     }
     // 
     GameObject player;

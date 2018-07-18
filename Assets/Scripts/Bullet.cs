@@ -33,6 +33,11 @@ public class Bullet
                 .GetComponent<Enemy>();
             if( script != null )
             {
+                if( Input.GetKey( KeyCode.LeftShift ) )
+                {
+                    script.Attack( 999,
+                        new Vector2( 0.0f,0.0f ) );
+                }
                 script.Attack( 1,vel * 1.35f );
             }
             Destroy( gameObject );

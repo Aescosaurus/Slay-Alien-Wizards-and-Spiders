@@ -41,12 +41,20 @@ public class Enemy
     }
     void DestroyThis()
     {
-        var bossScript = GetComponent<Boss1>();
+        var bossScript = GetComponent<BossDeath>();
         if( bossScript != null )
         {
             bossScript.DestroyMe();
             var spidBoss = GetComponent<SpiderBoss>();
-            spidBoss.Kill();
+            if( spidBoss != null )
+            {
+                spidBoss.Kill();
+            }
+            var wizBoss = GetComponent<WizardBoss>();
+            if( wizBoss != null )
+            {
+                wizBoss.Kill();
+            }
         }
         else
         {

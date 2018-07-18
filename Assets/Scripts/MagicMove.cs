@@ -37,9 +37,15 @@ public class MagicMove
     {
         transform.position = ( Vector3 )pos;
         SetVel( vel );
+        angle = Mathf.Atan2( vel.x,vel.y ) * Mathf.Rad2Deg;
+    }
+    void OnBecameInvisible()
+    {
+        Destroy( gameObject );
     }
     // 
     Rigidbody2D body;
-    Timer lifetime = new Timer( 2.4f );
+    Timer lifetime = new Timer( 12.4f );
     const float speed = 2.9f;
+    public float angle;
 }
