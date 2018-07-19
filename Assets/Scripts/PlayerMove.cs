@@ -19,6 +19,7 @@ public class PlayerMove
         Assert.IsNotNull( body );
         Assert.IsNotNull( cam );
         Assert.IsNotNull( walls );
+        Assert.IsNotNull( healthBar );
 
         float dt = GetDT();
 
@@ -77,6 +78,14 @@ public class PlayerMove
                 walls.transform.position.z
             );
             walls.transform.position = wallPos;
+
+            Vector3 hpBarPos = new Vector3
+            (
+                healthBar.transform.position.x,
+                transform.position.y - 4.7f,
+                healthBar.transform.position.z
+            );
+            healthBar.transform.position = hpBarPos;
         }
     }
     void FinishJump()
@@ -111,4 +120,5 @@ public class PlayerMove
     Timer maxJump = new Timer( 0.75f );
     Camera cam;
     [SerializeField] GameObject walls;
+    [SerializeField] GameObject healthBar;
 }
