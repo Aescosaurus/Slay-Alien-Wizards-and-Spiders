@@ -25,8 +25,9 @@ public class ChangeLevel
     {
         Assert.IsNotNull( player );
 
-        if( nCurLevel > levelsToProgress ||
-            ( nCurLevel > 1 && currentAct == 3 ) )
+        if( ( currentAct == 1 && nCurLevel > 3 ) ||
+            ( currentAct == 2 && nCurLevel > 2 ) ||
+            ( currentAct == 3 && nCurLevel > 2 ) )
         {
             nCurLevel = 1;
             usedMaps.Clear();
@@ -91,7 +92,6 @@ public class ChangeLevel
     Vector2 playerStart = new Vector2( 0.0f,0.0f );
     GameObject player;
     int nCurLevel = 1;
-    const int levelsToProgress = 3;
     int currentAct = 1;
     GameObject theLevel;
 }

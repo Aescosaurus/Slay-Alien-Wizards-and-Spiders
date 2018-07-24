@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\Utility.cs" />
      <Compile Include="Assets\Scripts\WizardBoss.cs" />
+     <Compile Include="Assets\Scripts\WormBossMove.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Aesc/Desktop/Slay-Alien-Wizards-and-Spiders/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
