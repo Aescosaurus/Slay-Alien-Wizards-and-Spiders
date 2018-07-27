@@ -11,6 +11,9 @@ public class Player
     {
         body = GetComponent<Rigidbody2D>();
         moveScript = GetComponent<PlayerMove>();
+
+        hpBarFiller = Utility.FindInScene( "HealthBar" )
+            .GetComponent<HealthBarBase>().childHealthBar;
     }
     void Update()
     {
@@ -62,7 +65,7 @@ public class Player
     Rigidbody2D body;
     PlayerMove moveScript;
     int health = 6;
-    [SerializeField] GameObject hpBarFiller;
+    GameObject hpBarFiller;
     Timer invulTimer = new Timer( 4.5f );
     bool invul = false;
 }

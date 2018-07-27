@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\FallingSpider.cs" />
      <Compile Include="Assets\Scripts\FixCameraAspect.cs" />
      <Compile Include="Assets\Scripts\FlyingSpider.cs" />
+     <Compile Include="Assets\Scripts\HealthBarBase.cs" />
      <Compile Include="Assets\Scripts\HideMouse.cs" />
      <Compile Include="Assets\Scripts\IsOnScreen.cs" />
      <Compile Include="Assets\Scripts\MachineGunner.cs" />
@@ -76,10 +77,12 @@
      <Compile Include="Assets\Scripts\PlayerShoot.cs" />
      <Compile Include="Assets\Scripts\PortalScript.cs" />
      <Compile Include="Assets\Scripts\PrefabManagerScript.cs" />
+     <Compile Include="Assets\Scripts\QuitButton.cs" />
      <Compile Include="Assets\Scripts\RogueEnemy.cs" />
      <Compile Include="Assets\Scripts\SmallSpider.cs" />
      <Compile Include="Assets\Scripts\SpawnWhenNoMoreEnemies.cs" />
      <Compile Include="Assets\Scripts\SpiderBoss.cs" />
+     <Compile Include="Assets\Scripts\StartButton.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\Utility.cs" />
      <Compile Include="Assets\Scripts\WizardBoss.cs" />

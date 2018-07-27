@@ -12,6 +12,8 @@ public class PlayerMove
     {
         body = GetComponent<Rigidbody2D>();
         cam = Camera.main;
+        walls = Utility.FindInScene( "Walls" );
+        healthBar = Utility.FindInScene( "HealthBar" );
     }
     // Update is called once per frame
     void Update()

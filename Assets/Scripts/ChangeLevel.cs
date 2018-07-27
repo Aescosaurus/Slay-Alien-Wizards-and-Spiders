@@ -7,20 +7,20 @@ public class ChangeLevel
     :
     MonoBehaviour
 {
-    void Start()
+    public void EnableTheObject()
     {
         player = Utility.FindInScene( "Player" );
         playerStart = player.transform.position;
 
         theLevel = initialLevel;
     }
-    void Update()
-    {
-        if( Input.GetKeyUp( KeyCode.Space ) )
-        {
-            NextLevel();
-        }
-    }
+    // void Update()
+    // {
+    //     if( Input.GetKeyUp( KeyCode.Space ) )
+    //     {
+    //         NextLevel();
+    //     }
+    // }
     public void NextLevel()
     {
         Assert.IsNotNull( player );
@@ -81,7 +81,7 @@ public class ChangeLevel
         theLevel = Instantiate( mapsList[nMap] );
     }
     // 
-    [SerializeField] GameObject initialLevel;
+    public GameObject initialLevel;
     [SerializeField] GameObject[] act1Maps;
     [SerializeField] GameObject[] act2Maps;
     [SerializeField] GameObject[] act3Maps;

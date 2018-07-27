@@ -7,6 +7,8 @@ public class Utility
 {
     public static GameObject FindInScene( string tag )
     {
+        // Debug.Log( tag );
+
         GameObject[] items = GameObject
             .FindGameObjectsWithTag( tag );
         Assert.IsTrue( items.Length == 1 );
