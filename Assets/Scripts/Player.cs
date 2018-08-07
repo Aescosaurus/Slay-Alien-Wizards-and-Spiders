@@ -14,6 +14,9 @@ public class Player
 
         hpBarFiller = Utility.FindInScene( "HealthBar" )
             .GetComponent<HealthBarBase>().childHealthBar;
+
+        lvlChanger = Utility.FindInScene( "LevelChanger" )
+            .GetComponent<ChangeLevel>();
     }
     void Update()
     {
@@ -43,6 +46,12 @@ public class Player
 
         // Hurt!
         --health;
+        // Check == 0 instead of < 1 so if youre hit
+        //  the fade out only triggers once.
+        if( health == 0 )
+        {
+            lvlChanger.EndGame();
+        }
         Vector2 nPos = hpBarFiller.transform.localPosition;
         nPos.x -= 0.318f;
         hpBarFiller.transform.localPosition = nPos;
@@ -66,6 +75,7 @@ public class Player
     PlayerMove moveScript;
     int health = 6;
     GameObject hpBarFiller;
-    Timer invulTimer = new Timer( 4.5f );
+    Timer invulTimer = new Timer( 2.5f );
     bool invul = false;
+    ChangeLevel lvlChanger;
 }

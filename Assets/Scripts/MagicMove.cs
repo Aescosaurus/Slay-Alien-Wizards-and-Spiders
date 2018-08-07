@@ -13,6 +13,14 @@ public class MagicMove
     }
     void Update()
     {
+        rotate.Update( Time.deltaTime );
+        if( rotate.IsDone() )
+        {
+            rotate.Reset();
+            transform.Rotate( Vector3.forward,
+                90.0f );
+        }
+
         lifetime.Update( Time.deltaTime );
 
         if( lifetime.IsDone() )
@@ -46,6 +54,7 @@ public class MagicMove
     // 
     Rigidbody2D body;
     Timer lifetime = new Timer( 12.4f );
+    Timer rotate = new Timer( 0.2f );
     const float speed = 2.9f;
     public float angle;
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.SceneManagement;
 
 public class ChangeLevel
     :
@@ -13,14 +14,31 @@ public class ChangeLevel
         playerStart = player.transform.position;
 
         theLevel = initialLevel;
+
+        cam = Camera.main;
     }
-    // void Update()
-    // {
-    //     if( Input.GetKeyUp( KeyCode.Space ) )
-    //     {
-    //         NextLevel();
-    //     }
-    // }
+    void Update()
+    {
+        if( Input.GetKeyUp( KeyCode.Space ) )
+        {
+            NextLevel();
+        }
+    }
+    public void EndGame()
+    {
+        // SceneManager.LoadScene( SceneManager
+        //     .GetActiveScene().name );
+
+        cam.GetComponent<Lockable>().Lock();
+
+        Utility.FindInScene( "QuitButton" )
+            .transform.position = new
+            Vector3( 1.5f,-4.0f,10.0f ) +
+            cam.transform.position;
+
+        Utility.FindInScene( "LoseScreen" )
+            .GetComponent<FadeOut>().StartFadingOut();
+    }
     public void NextLevel()
     {
         Assert.IsNotNull( player );
@@ -94,4 +112,5 @@ public class ChangeLevel
     int nCurLevel = 1;
     int currentAct = 1;
     GameObject theLevel;
+    Camera cam;
 }

@@ -10,6 +10,8 @@ TagManager:
   - LevelChanger
   - Walls
   - HealthBar
+  - QuitButton
+  - LoseScreen
   layers:
   - Default
   - TransparentFX

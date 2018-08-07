@@ -20,6 +20,9 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BigSpider
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FixCameraAspect
 e6178da547ba0ad9b7a5d5ab6509c606 Assembly-CSharp.dll:.Enemy
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.QuitButton
+f6732324ad4e7eda3910c088e97c319a Assembly-CSharp.dll:.HealthBarBase
+758f72adc64958386889e5d4bb9eb400 Assembly-CSharp.dll:.StartButton
 33d2ebdfbc14f64db47bb876826dd02f Assembly-CSharp.dll:.ChangeLevel
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MachineGunner
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -54,7 +57,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-cc5c596050e838bc02e20b3a40572486 Assembly-CSharp.dll:.Player
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Player
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
