@@ -11,6 +11,8 @@ public class PlayerShoot
     void Start()
     {
         cam = Camera.main;
+        shotSound = GetComponent<AudioSource>();
+        Assert.IsNotNull( shotSound );
     }
 
     // Update is called once per frame
@@ -44,6 +46,7 @@ public class PlayerShoot
             refire.Reset();
             ShootAt( GetMousePos() );
             canClick = false;
+            shotSound.Play();
         }
     }
     void ShootAt( Vector2 target )
@@ -81,4 +84,5 @@ public class PlayerShoot
     bool canClick = false;
     bool autoAttack = false;
     bool canToggle = false;
+    AudioSource shotSound;
 }
